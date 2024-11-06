@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Data Peserta</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Masukkan Data Anda</h1>
+        <form id="playerForm" class="form-container">
+            <input type="text" id="name" placeholder="Nama Lengkap" required>
+            <input type="text" id="nim" placeholder="Nomor Induk Mahasiswa" required>
+            <button type="submit" class="button">Mulai Kuis</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('playerForm').onsubmit = function() {
+            localStorage.setItem('name', document.getElementById('name').value);
+            localStorage.setItem('nim', document.getElementById('nim').value);
+            window.location.href = 'quiz.html';
+            return false;
+        };
+    </script>
+</body>
+</html>

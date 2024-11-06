@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hasil Kuis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Kuis</h1>
+        <div class="result-container">
+            <p>Nama: <span id="resultName"></span></p>
+            <p>NIM: <span id="resultNim"></span></p>
+            <p>Nilai Total: <span id="resultScore"></span></p>
+        </div>
+        <a href="index.html" class="button">Kembali ke Beranda</a>
+    </div>
+
+    <script>
+        document.getElementById('resultName').innerText = localStorage.getItem('name');
+        document.getElementById('resultNim').innerText = localStorage.getItem('nim');
+        document.getElementById('resultScore').innerText = localStorage.getItem('score');
+    </script>
+</body>
+</html>
